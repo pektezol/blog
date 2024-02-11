@@ -1,0 +1,86 @@
+body {
+  background: #181818;
+  color: #bbb;
+  font-family: sans-serif;
+  font-size: large;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 40em;
+  padding: 0 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.25em 0 0.25em 0;
+  line-height: 1.2;
+}
+h1 + div {
+  margin: 0.5em 0;
+}
+a:link {
+  color: #9bf;
+}
+a:visited {
+  color: #a9f;
+}
+a:focus, a:hover {
+  color: #9cf;
+}
+blockquote, pre, kbd, .highlight {
+  background: #000;
+  box-shadow: 0 0 0.5em #333;
+}
+blockquote {
+  border-left-color: #333;
+}
+pre {
+  overflow: auto;
+}
+blockquote, pre, .highlight {
+  padding: 0.5em;
+}
+blockquote *:first-child, .highlight *:first-child {
+  margin-top: 0;
+}
+blockquote *:last-child, .highlight *:last-child {
+  margin-bottom: 0;
+}
+pre, code, samp, kbd, .mono {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+pre code, pre samp, pre kbd, .mono kbd {
+  font-size: 1.0em;
+}
+pre .cursor {
+  background: #db0;
+  color: #000;
+}
+ul.blog {
+  margin-top: 1.5em;
+  list-style-type: none;
+  padding: 0;
+}
+ul.blog li {
+  margin: 1em 0;
+}
+hr {
+  margin: 1.5em auto;
+  border: 1;
+  border-bottom: 0.15em #666;
+}
+footer {
+  text-align: center;
+}
+nav a {
+  margin-right: 1.5em;
+  line-height: 2.5;
+}
+nav a:last-child  {
+  margin-right: 0;
+}
+main {
+  text-align: justify;
+}
+
+main h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+}
