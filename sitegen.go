@@ -58,7 +58,11 @@ func main() {
 				panic(err)
 			}
 			metadataHTML := fmt.Sprintf("<h1>%s</h1>", metadata.Title)
-			metadataHTML += fmt.Sprintf("<div>By <b>%s</b> on <b>%s</b> | %d words, %s to read</div><hr>", metadata.Author, metadata.Date, metadata.WordCount, calculateReadTime(metadata.WordCount))
+			authorLink := "pektezol"
+			if metadata.Author == "Cem Güven" {
+				authorLink = "cem-guven"
+			}
+			metadataHTML += fmt.Sprintf("<div>By <a href=\"https://www.linkedin.com/in/%s\"><b>%s</b></a> on <b>%s</b> | %d words, %s to read</div><hr>", authorLink, metadata.Author, metadata.Date, metadata.WordCount, calculateReadTime(metadata.WordCount))
 			htmlContent := []byte(metadataHTML + string(mdContent))
 			outputFile := filepath.Join(outputDir, filepath.Base(path[:len(path)-len(filepath.Ext(path))])+".html")
 			outputFileDir := filepath.Dir(outputFile)
