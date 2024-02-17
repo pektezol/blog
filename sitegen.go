@@ -9,7 +9,6 @@ import (
 	"path/filepath"
 	"sort"
 	"strings"
-	"time"
 
 	"github.com/russross/blackfriday/v2"
 	"gopkg.in/yaml.v2"
@@ -75,11 +74,9 @@ func main() {
 			if err := postTmpl.Execute(output, struct {
 				Title   string
 				Content template.HTML
-				Year    int
 			}{
 				Title:   metadata.Title,
 				Content: template.HTML(htmlContent),
-				Year:    time.Now().Year(),
 			}); err != nil {
 				panic(err)
 			}
@@ -98,10 +95,8 @@ func main() {
 	defer homeFile.Close()
 	if err := homeTmpl.Execute(homeFile, struct {
 		Posts []Metadata
-		Year  int
 	}{
 		Posts: posts,
-		Year:  time.Now().Year(),
 	}); err != nil {
 		panic(err)
 	}

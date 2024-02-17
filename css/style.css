@@ -84,3 +84,9 @@ main {
 main h1, h2, h3, h4, h5, h6 {
   text-align: left;
 }
+
+p img {
+  display: block; /* Ensures images are displayed as block elements */
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 100%; /* Ensures images don't exceed the width of their container */
+}
